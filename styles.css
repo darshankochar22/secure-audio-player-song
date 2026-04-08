@@ -59,11 +59,6 @@ audio {
   width: 100%;
 }
 
-.actions {
-  display: flex;
-  justify-content: flex-end;
-}
-
 #status {
   min-height: 1.5rem;
   color: #fda4af;
