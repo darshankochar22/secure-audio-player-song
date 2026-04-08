@@ -37,6 +37,22 @@ A password-protected Node.js audio player that streams your WAV file only after 
    - `git remote add origin <YOUR_GITHUB_REPO_URL>`
    - `git push -u origin main`
 
+## Deploy on Vercel (recommended)
+
+1. Push this project to GitHub.
+2. In Vercel, click **Add New Project** and import this repo.
+3. Add these environment variables in Vercel Project Settings:
+   - `ACCESS_CODE`
+   - `JWT_SECRET`
+   - `AUDIO_FILE` = `Aadhi Aadhi_FINAL_MASTER_48Khz_16BIt_07_.wav`
+4. Deploy.
+
+This repo includes Vercel serverless API routes in `api/`:
+- `POST /api/login`
+- `POST /api/logout`
+- `GET /api/session`
+- `GET /api/audio`
+
 ## Deploy on Render
 
 1. Push this project to GitHub.
@@ -46,3 +62,8 @@ A password-protected Node.js audio player that streams your WAV file only after 
    - `ACCESS_CODE`
    - `JWT_SECRET`
 5. Deploy and open your service URL.
+
+## GitHub Pages note
+
+GitHub Pages is static hosting only, so it cannot securely protect your audio endpoint with server-side auth.  
+If you deploy to GitHub Pages, your audio file can be downloaded by anyone with the direct file URL.
