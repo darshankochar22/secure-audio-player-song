@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: secure-audio-player
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AUDIO_FILE
+        value: Aadhi Aadhi_FINAL_MASTER_48Khz_16BIt_07_.wav
+      - key: ACCESS_CODE
+        sync: false
+      - key: JWT_SECRET
+        sync: false
